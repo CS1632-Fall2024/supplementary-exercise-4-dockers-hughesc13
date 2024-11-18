@@ -22,3 +22,5 @@ our docker-ci file is a continuous integration testing. runs automatically on pu
 
 what is the race condition? how to oslve it?
 if u go to docker-ciyaml
+a race condition sometimes manifests and sometimes it doesnt. how to prevent this? synchronization, we will insert a script to insert to wait for websevrer
+to launch. we made wait-for-webserver to help. insert it into docker-ciyaml 
