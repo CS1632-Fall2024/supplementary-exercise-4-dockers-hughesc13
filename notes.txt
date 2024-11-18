@@ -1,0 +1,19 @@
+a docker is a virtual machien that is lightweight. it uses less resources in terms of memory and compute time compared to typical virtual machine.
+in part 1 of exercise we implemented continuous integration and delivery testing. when u try to implement ci-cd pipeliens for complicated software,
+ie. not just java package rentacat, what happens/? WE Find out here. we will try to deploy an entire website. a docker might help cause this is more 
+complicated.
+docker helps us by getting all the things our package depends on, ie operating system and required software packages and even a db management system
+or tables or data and run it on that. this is called a container. so whoever deploys a container is guaranteed the system will run no matter
+whether ur computer is linux or macos. 
+okay so for some reason using spring boot we launched a website or something
+
+a docker image is a big binary file which has everything u need for ur software, all packages and oerating systems
+a docker container is a runtime instance of the docker image. it is not a file!
+u can create multiple instances docker containers of same docker image 
+
+usually u will create a docker image not from scratch but from a preexisting docker image. thats what first line in dokcerfile is! whatis the base
+preexisting image that we will create our image?
+in our case we r saying we want to use a 3rd party image published by adoptopenjdk
+every docker image has a special directory / app ours is workdir / app
+we copy over our source code -pom.xml and src 
+docker file is basially saying as soon as we create the container launch the website
