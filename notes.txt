@@ -17,3 +17,8 @@ in our case we r saying we want to use a 3rd party image published by adoptopenj
 every docker image has a special directory / app ours is workdir / app
 we copy over our source code -pom.xml and src 
 docker file is basially saying as soon as we create the container launch the website
+
+our docker-ci file is a continuous integration testing. runs automatically on pushing and pulling. 
+
+what is the race condition? how to oslve it?
+if u go to docker-ciyaml
