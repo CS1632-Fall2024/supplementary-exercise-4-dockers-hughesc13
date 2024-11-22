@@ -39,7 +39,7 @@ public class D3Test {
   @Before
   public void setUp() {
     try {
-      ProcessBuilder processBuilder = new ProcessBuilder("sh", "path/to/wait-for-webserver.sh");
+      ProcessBuilder processBuilder = new ProcessBuilder("sh", "wait-for-webserver.sh");
       processBuilder.redirectErrorStream(true); 
       Process process = processBuilder.start();
 
