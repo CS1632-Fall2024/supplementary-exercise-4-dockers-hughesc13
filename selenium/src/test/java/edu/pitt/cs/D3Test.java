@@ -38,26 +38,6 @@ public class D3Test {
   JavascriptExecutor js;
   @Before
   public void setUp() {
-    try {
-      ProcessBuilder processBuilder = new ProcessBuilder("sh", "wait-for-webserver.sh");
-      processBuilder.redirectErrorStream(true); 
-      Process process = processBuilder.start();
-
-      try (Scanner scanner = new Scanner(process.getInputStream())) {
-          while (scanner.hasNextLine()) {
-              System.out.println(scanner.nextLine());
-          }
-      }
-
-      int exitCode = process.waitFor();
-      if (exitCode != 0) {
-          throw new RuntimeException("wait-for-webserver.sh failed with exit code " + exitCode);
-      }
-  } catch (Exception e) {
-      e.printStackTrace();
-      throw new RuntimeException("fail");
-  }
-
   ChromeOptions options = new ChromeOptions();
   options.addArguments("--headless");
   driver = new ChromeDriver(options);
